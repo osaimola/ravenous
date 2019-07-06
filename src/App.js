@@ -16,6 +16,7 @@ const business = {
   reviewCount: 90
 };
 
+// build list of businesses to be passed as props to the BusinessList component.
 let businesses = [business, business, business, business, business, business];
 
 function App() {

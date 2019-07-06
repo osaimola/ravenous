@@ -4,21 +4,13 @@ import Business from '../Business/Business';
 
 class BusinessList extends React.Component {
 	render () {
-		// starthere
+		// use props as received from App.js to build list of Business components with a business prop each
 		const businesses = this.props.businesses;
 		const businessList = businesses.map(business =>
-			<Business
-				imageSrc={business.imageSrc}
-				address={business.address}
-				city={business.city}
-				state={business.state}
-				zipCode={business.zipCode}
-				category={business.category}
-				rating={business.rating}
-				reviewCount={business.reviewCount}/>
+			<Business business={business}/>
 		);
-		// endhere
 
+		// return a BusinessList component with a list of businesses as children
 		return (
 			<div className="BusinessList">
 				{businessList}
